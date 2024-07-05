@@ -1,0 +1,109 @@
+.section{
+    > div{
+        height: 100vh;
+
+        &.alpha{
+            position: relative;
+            background-color: #999;
+            background-image: var(--url);
+            background-size: cover;
+            background-position: 50% 50%;
+
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 50;
+                background-color: rgba(0,0,0,0);
+                transition: background-color 400ms;
+                pointer-events: none;
+            }
+
+            &:hover{
+                &::before{
+                    background-color: rgba(0,0,0,0.3);
+                }
+
+                h2{
+                    bottom: 2rem;
+                }
+            }
+            > a{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+                text-decoration: none;
+            }
+
+            header{
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 100;
+
+                h1{
+                    flex-grow: 1;
+                    margin: 0;
+                    text-align: center;
+                    font-size: 0;
+
+                    a{
+                        svg{
+                            width: 10rem;
+
+                            path{
+                                fill: white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            h2{
+                position: absolute;
+                font-family: "Roboto Condensed",Helvetica,Arial,sans-serif;
+                font-weight: 700;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                text-align: center;
+                padding: 3.3rem;
+                margin: 0;
+                font-size: 3.6rem;
+                line-height: 4.2rem;
+                z-index: 110;
+                transition: bottom $speed $easin;
+                color: #fff;
+            }
+        }
+
+        &.beta{
+            .title-section{
+                margin: 1.5rem 0 0;
+                padding: 0 3rem;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: "Roboto", sans-serif;
+                font-weight: 600;
+                color: orangered;
+            }
+            .wrap-content{
+                overflow: auto;
+                height: 100vh;
+                @include breakpoints(medium-plus-screen){
+                    height: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.cards-list{
+    list-style: none;
+    padding: 0 3rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    li{
+        width: calc(50% - 1.5rem);
+        transition: width $speed $easin;
+    }
+    @include breakpoints(large-screen){
+        flex-direction: column;
+        li{
+            width: 100%;
+        }
+    }
+    @include breakpoints(medium-plus-screen){
+        flex-direction: row;
+        li{
+            width: calc(50% - 1.5rem);
+        }
+    }
+    @include breakpoints(small-less-screen){
+        display: block;
+        li{
+            width: 100%;
+        }
+    }
+}

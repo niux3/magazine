@@ -1,0 +1,80 @@
+.card-item{
+    margin: 1.7rem 0 2.3rem;
+
+    article{
+        a{
+            color: #444;
+            text-decoration: none;
+            transition: color $speed;
+            display: block;
+
+            &:hover{
+                color: #07002e;
+
+                figure{
+                    &::before{
+                        opacity: .2;
+                    }
+                    img{
+                        transform: translate(-50%, -50%) scale(1.25);
+                    }
+                }
+            }
+
+            figure{
+                overflow: hidden;
+                position: relative;
+                aspect-ratio: 4 / 3;
+                &:before{
+                    content: '';
+                    display: block;
+                    opacity: 0;
+                    background-color: #000;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    transition: opacity $speed;
+                    z-index: 1;
+                }
+                img{
+                    display: block;
+                    object-fit: cover;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: transform $speed $easin;
+                    width: 100%;
+
+                }
+            }
+            .category{
+                margin-top: 0;
+                margin-bottom: 0;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: orangered;
+                font-family: "Roboto", sans-serif;
+            }
+            hgroup{
+                h2{
+                    font-family: "Roboto Condensed",Helvetica,Arial,sans-serif;
+                    font-weight: 700;
+                    font-size: 4.2rem;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    line-height: 3.9rem;
+                }
+                h3{
+                    font-family: "Roboto Condensed",Helvetica,Arial,sans-serif;
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                    margin-top: 0;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}

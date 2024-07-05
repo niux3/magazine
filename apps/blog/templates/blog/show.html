@@ -1,0 +1,13 @@
+{% extends 'default.html' %}
+{% load core_tags %}
+
+{% block id_page %}detail{% endblock %}
+{% block main %}
+    <article>
+        <h2>{{ object.title }}</h2>
+        <p class="date">posté le {{ object.posted }}</p>
+        <div>
+            {{ object.content | markdown }}
+        </div>
+    </article>
+{% endblock %}

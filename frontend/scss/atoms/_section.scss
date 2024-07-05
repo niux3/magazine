@@ -1,0 +1,21 @@
+.section{
+    display: flex;
+    transition: transform $speed $easin;
+
+    > div{
+        width: 50%;
+        transition: width $speed $easin;
+    }
+
+    @include breakpoints(medium-plus-screen){
+        flex-direction: column;
+
+        > div{
+            width: 100%;
+
+            &:last-child{
+                height: auto;
+            }
+        }
+    }
+}

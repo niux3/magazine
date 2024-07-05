@@ -1,0 +1,11 @@
+nav{
+    position: fixed;
+    top: 0;
+    left: -30rem;
+    bottom: 0;
+    width: 30rem;
+    z-index: 5000;
+    transition: left $speed $easin;
+    height: 100vh;
+    overflow: auto;
+}
