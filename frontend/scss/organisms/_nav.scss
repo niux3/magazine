@@ -35,12 +35,30 @@ nav{
 
                             a{
                                 text-transform: uppercase;
-                                font-family: "Roboto", sans-serif;
+                                font-family: "Roboto Condensed", sans-serif;
+                                font-weight: 700;
+                                text-decoration: none;
                             }
                         }
                         ul{
                             max-height: 0;
                             overflow: hidden;
+                            transition: max-height $speed $easin;
+                            margin: 0 0 0 1rem;
+
+                            li{
+                                &:first-child{
+                                    margin-top: 1.5rem;
+                                }
+                                &:last-child{
+                                    margin-bottom: 1.5rem;
+                                }
+                            }
+                        }
+                        &.show{
+                            ul{
+                                max-height: 20rem;
+                            }
                         }
                     }
                 }
