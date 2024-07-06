@@ -8,6 +8,7 @@ export default class Overlay{
     onOverlay(){
         this._$overlay.addEventListener('pointerdown', e =>{
             this._$main.dataset.state = ''
+            document.body.classList.remove('ovh')
         })
     }
 }

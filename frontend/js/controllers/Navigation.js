@@ -3,19 +3,20 @@ export default class Navigation{
         this._$burgerOpen = document.getElementById('burgerOpen')
         this._$burgerClose = document.getElementById('burgerClose')
         this._$main = document.querySelector('main')
-
         this._$accordions = document.querySelectorAll('nav .accordion')
     }
 
     openNav(){
         this._$burgerOpen.addEventListener('pointerdown', e =>{
             this._$main.dataset.state = 'onNav'
+            document.body.classList.add('ovh')
         })
     }
 
     closeNav(){
         this._$burgerClose.addEventListener('pointerdown', e =>{
             this._$main.dataset.state = ''
+            document.body.classList.remove('ovh')
         })
     }
 
