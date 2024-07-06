@@ -89,8 +89,8 @@ $fonts : (
     bolditalic        : raleway-bolditalic-webfont,
 ) !default;
 
-$font-family-base : "regular", Helvetica, Arial, sans-serif !default;
-$font-family-title : "light", Helvetica, Arial, sans-serif !default;
+$font-family-base : georgia, serif !default;
+$font-family-title : "Roboto Condensed", Helvetica, Arial, sans-serif !default;
 $font-family-monospace : consolas, monaco, courier, monospace !default;
 
 $font-size-base : 1.5rem !default;

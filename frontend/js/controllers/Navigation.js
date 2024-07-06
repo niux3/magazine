@@ -24,7 +24,6 @@ export default class Navigation{
 
     onOverlay(){
         this._$overlay.addEventListener('pointerdown', e =>{
-            e.preventDefault()
             this._$main.classList.remove('onNav')
         })
     }

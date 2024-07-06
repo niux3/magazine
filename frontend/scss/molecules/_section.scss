@@ -43,9 +43,9 @@
 
             header{
                 position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
+                top: 1.5rem;
+                right: 1.5rem;
+                left: 1.5rem;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -71,7 +71,6 @@
 
             h2{
                 position: absolute;
-                font-family: "Roboto Condensed",Helvetica,Arial,sans-serif;
                 font-weight: 700;
                 right: 0;
                 bottom: 0;
