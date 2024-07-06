@@ -1,5 +1,5 @@
 main{
-    &.onNav{
+    &[data-state = "onNav"]{
         overflow-x: hidden;
         .overlay{
             pointer-events: auto;
@@ -13,6 +13,13 @@ main{
 
         .section{
             transform: translateX(30rem);
+        }
+    }
+    &[data-state = "onSearch"]{
+        .overlay{
+            pointer-events: auto;
+            opacity: .45;
+            top: 30rem;
         }
     }
 }
