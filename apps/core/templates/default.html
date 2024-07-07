@@ -1,7 +1,59 @@
 {% extends 'base.html' %}
+{% load static %}
 
 
-{% block title %}ACME{% endblock title %}
-<main>
-    {% block main %}{% endblock %}
-</main>
+{% block title %}Context{% endblock title %}
+{% block main %}
+    <section class="section">
+        <div class="alpha" style="--url: url({% static 'img/legislative-2024.jpg' %})">
+            <header>
+                <button type="button" id="burgerOpen">nav</button>
+                {% include 'partials/logo.html' %}
+                <button type="button" id="btnSearch">rechercher</button>
+            </header>
+            <a href="">
+                <h2>Législatives 2024 :<br>retrouvez les résultats du premier tour dans notre carte interactive</h2>
+            </a>
+        </div>
+        <div class="beta">
+            <div class="wrap-content">
+                <p class="title-section">Les derniers articles</p>
+                <div class="content">
+                    <ul class="cards-list">
+                        <li class="card-item">
+                            <article>
+                                <a href="">
+                                    <figure>
+                                        <img src="https://picsum.photos/id/28/700/700" alt="">
+                                    </figure>
+                                    <p class="category">Transport</p>
+                                    <hgroup>
+                                        <h2>Autoroutes</h2>
+                                        <p>Les hausses de péages nourrissent, année après année, le débat sur les profits des sociétés d'autoroutes et le modèle concessif. Pour y répondre, le gouvernement a introduit dans la loi de finances pour 2024 une taxe sur les infrastructures de transports. Il affiche également sa volonté de repenser le modèle en vue de la fin des concessions historiques.</p>
+                                    </hgroup>
+                                    <div class="intro">La taxe sur les infrastructures a été adoptée dans le cadre de la loi de finances, aussitôt contestée à la fois par les sociétés concessionnaires d'autoroutes (SCA) et l'union des aéroports français, qui ont saisi le Conseil d'État. Quant à l'avenir des concessions, il n'est pas encore officiellement en débat : alors que Clément Beaune avait annoncé des assises puis une commission d'experts, son successeur Patrice Vergriete n'a pas encore tranché, début mai, sur la forme que prendra le débat.</div>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="card-item">
+                            <article>
+                                <a href="">
+                                    <figure>
+                                        <img src="https://picsum.photos/id/29/700/700" alt="">
+                                    </figure>
+                                    <p class="category">Transport</p>
+                                    <hgroup>
+                                        <h2>Financement des infrastructures</h2>
+                                        <p>Un premier rapport du Conseil d’orientation des infrastructures, en mars 2022, avait quantifié les besoins considérables durant le quinquennat : 100 milliards d’euros d’investissement. Un second rapport début 2023 a défini plusieurs scénarios pour prioriser les projets. Dans la foulée, la Première ministre a annoncé, fin février, retenir le scénario dit de « planification écologique », qui fait la part belle au ferroviaire et réduit les investissements routiers.</p>
+                                    </hgroup>
+                                    <div class="intro">Le mode ferré devrait bénéficier d’un « plan d’avenir » de 100 milliards d’euros d’ici 2040. Pour financer ces investissements, le gouvernement compte mettre à contribution les secteurs aérien et autoroutier, mais aussi la SNCF. Il doit encore préciser dans le détail son plan de financement et annoncer les projets qui seront repoussés ou annulés. Mais tout cela avance doucement, à l'image de la révision du contrat de performance de SNCF Réseau.</div>
+                                </a>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
