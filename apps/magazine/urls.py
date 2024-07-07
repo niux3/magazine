@@ -1,12 +1,12 @@
 from django.urls import path
-from blog.apps import BlogConfig
-from blog.views import (
+from magazine.apps import MagazineConfig
+from magazine.views import (
     PostsList,
     PostDetail,
 )
 
 
-app_name = BlogConfig.name
+app_name = MagazineConfig.name
 
 
 urlpatterns = [
