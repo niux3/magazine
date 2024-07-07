@@ -9,6 +9,7 @@ class Post(models.Model):
         ordering = ['-updated']
     
     title = models.CharField(max_length=255)
+    sub_title = models.TextField()
     slug = models.SlugField(max_length=255)
     content = models.TextField()
     online = models.BooleanField(default=True)
