@@ -1,0 +1,54 @@
+#detail{
+    article{
+        padding: 0 3rem;
+
+        header{
+            height: calc(100vh - 4rem);
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .wrap{
+                hgroup{
+                    h1{
+                        font-family: 'Roboto Condensed', sans-serif;
+                        font-weight: 700;
+                        font-size: 5.6rem;
+                        line-height: 5.6rem;
+                        margin-bottom: 3rem;
+                    }
+                    p{
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        padding: 0 10%;
+                        font-size: 2.4rem;
+                        line-height: 3.2rem;
+
+                    }
+                }
+                figure{
+                    margin-top: 3.5rem;
+                    img{
+                        width: 8rem;
+                        border-radius: 100%;
+                    }
+                    figcaption{
+                        margin-top: 3rem;
+                        font-family: "Roboto Condensed", sans-serif;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        font-size: 1.4rem;
+                    }
+                }
+                .posted{
+                    font-style: italic;
+                }
+            }
+        }
+        .content{
+            font-size: 1.8rem;
+            line-height: 1.8;
+        }
+    }
+}

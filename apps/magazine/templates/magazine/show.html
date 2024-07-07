@@ -8,12 +8,17 @@
 {% block content_beta %}
     <article>
         <header>
-            <hgroup>
-                <h1>{{ object.title }}</h1>
-                <p>{{ object.sub_title }}</p>
-            </hgroup>
-            <p class="author">{{ object.author }}</p>
-            <p class="posted">{{ object.updated }}</p>
+            <div class="wrap">
+                <hgroup>
+                    <h1>{{ object.title }}</h1>
+                    <p>{{ object.sub_title }}</p>
+                </hgroup>
+                <figure class="author">
+                    <img src="{% static 'img/author.png' %}" alt="">
+                    <figcaption>{{ object.author.first_name }}&nbsp;{{ object.author.last_name }}</figcaption>
+                </figure>
+                <p class="posted">{{ object.updated }}</p>
+            </div>
         </header>
         <div class="content">
             {{ object.content|markdown }}

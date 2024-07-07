@@ -11,7 +11,7 @@
             <article>
                 <a href="{% url 'magazine:detail' id=object.id slug=object.slug %}">
                     <figure>
-                        <img src="https://picsum.photos/id/28/700/700" alt="">
+                        <img src="{% static object.illustration %}" alt="">
                     </figure>
                     <p class="category">{{ object.category.name }}</p>
                     <hgroup>

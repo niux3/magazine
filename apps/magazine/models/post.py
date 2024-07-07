@@ -16,7 +16,7 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     featured = models.BooleanField(default=False)
-    illustration = models.URLField()
+    illustration = models.CharField(max_length=255)
 
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='magazine_posts_category')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='magazine_posts_user')

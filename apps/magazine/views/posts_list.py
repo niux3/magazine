@@ -10,4 +10,6 @@ class PostsList(ListView):
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
         ctx['title_section'] = "Les derniers articles"
+        ctx['object'] = Post.objects.filter(online=True, featured=True)[0]
+        ctx['share'] = False
         return ctx

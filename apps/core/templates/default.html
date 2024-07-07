@@ -5,7 +5,7 @@
 {% block title %}Context{% endblock title %}
 {% block main %}
     <section class="section">
-        {% include 'partials/alpha.html' %}
+        {% include 'partials/alpha.html' with data=object share=share %}
         <div class="beta">
             <div class="wrap-content">
                 {% block title_section %}

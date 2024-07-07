@@ -46,12 +46,12 @@
                     top: 50%;
                     transform: translate(-50%, -50%);
                     transition: transform $speed $easin;
-                    width: 100%;
+                    height: 100%;
 
                 }
             }
             .category{
-                margin-top: 0;
+                margin-top: 1.7rem;
                 margin-bottom: 0;
                 text-transform: uppercase;
                 font-weight: 600;
@@ -62,15 +62,15 @@
                 h2{
                     font-weight: 700;
                     font-size: 4.2rem;
-                    margin-top: 0;
+                    margin-top: 1.7rem;
                     margin-bottom: 0;
                     line-height: 3.9rem;
                 }
                 p{
                     font-weight: 400;
-                    font-family: "Roboto Condensed", sans-serif;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
                     font-size: 1.8rem;
-                    margin-top: 0;
+                    margin-top: 1.7rem;
                     margin-bottom: 2rem;
                 }
             }
