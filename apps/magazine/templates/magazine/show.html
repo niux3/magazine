@@ -1,13 +1,25 @@
 {% extends 'default.html' %}
-{% load core_tags %}
+{% load static core_tags %}
 
 {% block id_page %}detail{% endblock %}
-{% block main %}
+{% block title %}{{ object.title }} - {{ block.super }}{% endblock %}
+
+
+{% block content_beta %}
     <article>
-        <h2>{{ object.title }}</h2>
-        <p class="date">posté le {{ object.posted }}</p>
-        <div>
-            {{ object.content | markdown }}
+        <header>
+            <hgroup>
+                <h1>{{ object.title }}</h1>
+                <p>{{ object.sub_title }}</p>
+            </hgroup>
+            <p class="author">{{ object.author }}</p>
+            <p class="posted">{{ object.updated }}</p>
+        </header>
+        <div class="content">
+            {{ object.content|markdown }}
         </div>
+        <footer>
+            
+        </footer>
     </article>
 {% endblock %}
