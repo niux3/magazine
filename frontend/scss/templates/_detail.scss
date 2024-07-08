@@ -1,4 +1,31 @@
 #detail{
+    .beta{
+        .wrap-content{
+            @include breakpoints(medium-plus-screen){
+                position: relative;
+                z-index: 100;
+                margin-top: -15rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .title-section{
+                    padding: 0 3rem;
+                    width: 100%;
+
+                    > span{
+                        background: white;
+                        display: block;
+                        width: 100%;
+                        margin: 0 auto;
+                        padding-top: 2.5rem;
+                        max-width: 68rem;
+                    }
+                }
+            }
+        }
+    }
     article{
         padding: 0 3rem;
 
@@ -10,6 +37,13 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            @include breakpoints(medium-plus-screen){
+                max-width: 68rem;
+                margin: 0 auto;
+                background: white;
+                height: auto;
+                display: block;
+            }
             .wrap{
                 hgroup{
                     h1{
@@ -17,6 +51,7 @@
                         font-weight: 700;
                         font-size: 5.6rem;
                         line-height: 5.6rem;
+                        padding-top: 2.5rem;
                         margin-bottom: 3rem;
                     }
                     p{
