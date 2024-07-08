@@ -49,6 +49,23 @@
         .content{
             font-size: 1.8rem;
             line-height: 1.8;
+
+            p{
+                padding: 0 5%;
+
+                &:first-of-type{
+                    &::first-letter{
+                        float: left;
+                        font-size: 5.4rem;
+                        margin-top: 1.5rem;
+                        margin-right: 1rem;
+                        position: relative;
+                        line-height: 0;
+                        text-transform: uppercase;
+
+                    }
+                }
+            }
         }
     }
 }
