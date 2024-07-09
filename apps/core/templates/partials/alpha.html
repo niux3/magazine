@@ -1,9 +1,13 @@
 {% load static %}
 <div class="alpha" style="--url: url({% static data.illustration %})">
     <header>
-        <button type="button" id="burgerOpen">nav</button>
+        <button type="button" aria-label="Navigation" id="burgerOpen" class="with-icon">
+            <i class="zmdi zmdi-menu"></i>
+        </button>
         {% include 'partials/logo.html' with data=data %}
-        <button type="button" id="btnSearch">rechercher</button>
+        <button type="button" id="btnSearch" aria-label="Chercher" class="with-icon">
+            <i class="zmdi zmdi-search"></i>
+        </button>
     </header>
     {% if share == False %}
         <a href="{% url 'magazine:detail' id=data.id slug=data.slug %}">
