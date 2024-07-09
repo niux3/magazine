@@ -14,10 +14,6 @@
             <h2>{{ data.title }}</h2>
         </a>
     {% else %}
-        <ul style="display:none">
-            <li><a href="">facebook</a></li>
-            <li><a href="">tweeter</a></li>
-            <li><a href="">linkedin</a></li>
-        </ul>
+        {% include "partials/share.html" %}
     {% endif %}
 </div>

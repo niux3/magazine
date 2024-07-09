@@ -94,6 +94,16 @@
                 transition: bottom $speed $easin;
                 color: #fff;
             }
+            .share{
+                position: absolute;
+                bottom: 2.5rem;
+                right: 0;
+                left: 0;
+                z-index: 110;
+                a{
+                    color: white;
+                }
+            }
         }
 
         &.beta{
