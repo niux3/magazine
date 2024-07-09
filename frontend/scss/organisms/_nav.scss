@@ -39,6 +39,18 @@ nav{
                                 font-weight: 700;
                                 text-decoration: none;
                             }
+
+                            .with-icon{
+                                &:hover{
+                                    i{
+                                        color: orangered;
+                                        transform: rotate(90deg);
+                                    }
+                                }
+                                i{
+                                    transition: transform $speed $easin, color $speed;
+                                }
+                            }
                         }
                         ul{
                             max-height: 0;
@@ -56,6 +68,12 @@ nav{
                             }
                         }
                         &.show{
+                            .with-icon{
+                                i{
+                                    color: orangered;
+                                    transform: rotate(90deg);
+                                }
+                            }
                             ul{
                                 max-height: 20rem;
                             }
