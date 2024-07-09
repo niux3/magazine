@@ -15,8 +15,8 @@
     <body id="{% block id_page %}home{% endblock %}">
         <main>
             {% include 'partials/search.html' %}
-            {% include 'partials/navigation.html' %}
             {% block main %}{% endblock %}
+            {% include 'partials/navigation.html' %}
         </main>
         <script src="{% static "js/app.js" %}"></script>
         {% block js %}{% endblock %}
