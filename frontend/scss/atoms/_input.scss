@@ -16,7 +16,7 @@ input{
             color: darken(map-get($colors, black12), 25%);
         }
 
-        &:focus, &:active{
+        &:focus, &:focus-visible, &:active{
             border-color: map-get($color-primary, default) !important;
             cursor: text;
         }

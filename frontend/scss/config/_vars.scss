@@ -29,9 +29,15 @@ $colors : (
 // Semantic colors
 $basics-colors : (
     primary : (
+        default   : map-get($colors, alizarin),
+        hover     : map-get($colors, pomegranate),
+    ),
+    /*
+    primary : (
         default   : map-get($colors, peter-river),
         hover     : map-get($colors, belize-hole),
     ),
+    */
     secondary : (
         default   : map-get($colors, concrete),
         hover     : map-get($colors, asbetos),
