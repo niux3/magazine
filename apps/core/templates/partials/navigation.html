@@ -21,132 +21,22 @@
             <li>
                 <h2>Éditions</h2>
                 <ul>
+                    {% for category in categories_navigation %}
                     <li class="accordion">
                         <span>
-                            <a href="">Pouvoirs</a>
+                            <a href="{% url 'magazine:categories' slug=category.slug %}">{{ category.name }}</a>
                             <button type="button" class="with-icon">
                                 <i class="zmdi zmdi-chevron-right"></i>
                             </button>
                         </span>
                         <ul>
-                            <li><a href="">Élections européennes 2024</a></li>
-                            <li><a href="">Législatives 2024</a></li>
-                            <li><a href="">Vie du Parlement européen (10e législature)</a></li>
-                            <li><a href="">Toute notre couverture Pouvoirs</a></li>
+                            {% for post in category.posts %}
+                            <li><a href="{% url 'magazine:detail' id=post.id slug=post.slug %}">{{ post.title }}</a></li>
+                            {% endfor %}
+                            <li><a href="{% url 'magazine:categories' slug=category.slug %}">Toute notre couverture {{ category.name }}</a></li>
                         </ul>
                     </li>
-                    <li class="accordion">
-                        <span>
-                            <a href="">Énergie</a>
-                            <button type="button" class="with-icon">
-                                <i class="zmdi zmdi-chevron-right"></i>
-                            </button>
-                        </span>
-                        <ul>
-                            <li><a href="">Élections européennes 2024</a></li>
-                            <li><a href="">Législatives 2024</a></li>
-                            <li><a href="">Vie du Parlement européen (10e législature)</a></li>
-                            <li><a href="">Toute notre couverture Pouvoirs</a></li>
-                        </ul>
-                    </li>
-                    <li class="accordion">
-                        <span>
-                            <a href="">Transports</a>
-                            <button type="button" class="with-icon">
-                                <i class="zmdi zmdi-chevron-right"></i>
-                            </button>
-                        </span>
-                        <ul>
-                            <li><a href="">Élections européennes 2024</a></li>
-                            <li><a href="">Législatives 2024</a></li>
-                            <li><a href="">Vie du Parlement européen (10e législature)</a></li>
-                            <li><a href="">Toute notre couverture Pouvoirs</a></li>
-                        </ul>
-                    </li>
-                    <li class="accordion">
-                        <span>
-                            <a href="">Agro</a>
-                            <button type="button" class="with-icon">
-                                <i class="zmdi zmdi-chevron-right"></i>
-                            </button>
-                        </span>
-                        <ul>
-                            <li><a href="">Élections européennes 2024</a></li>
-                            <li><a href="">Législatives 2024</a></li>
-                            <li><a href="">Vie du Parlement européen (10e législature)</a></li>
-                            <li><a href="">Toute notre couverture Pouvoirs</a></li>
-                        </ul>
-                    </li>
-                    <li class="accordion">
-                        <span>
-                            <a href="">Environnement</a>
-                            <button type="button" class="with-icon">
-                                <i class="zmdi zmdi-chevron-right"></i>
-                            </button>
-                        </span>
-                        <ul>
-                            <li><a href="">Élections européennes 2024</a></li>
-                            <li><a href="">Législatives 2024</a></li>
-                            <li><a href="">Vie du Parlement européen (10e législature)</a></li>
-                            <li><a href="">Toute notre couverture Pouvoirs</a></li>
-                        </ul>
-                    </li>
-                    <li class="accordion">
-                        <span>
-                            <a href="">E-santé</a>
-                            <button type="button" class="with-icon">
-                                <i class="zmdi zmdi-chevron-right"></i>
-                            </button>
-                        </span>
-                        <ul>
-                            <li><a href="">Élections européennes 2024</a></li>
-                            <li><a href="">Législatives 2024</a></li>
-                            <li><a href="">Vie du Parlement européen (10e législature)</a></li>
-                            <li><a href="">Toute notre couverture Pouvoirs</a></li>
-                        </ul>
-                    </li>
-                    <li class="accordion">
-                        <span>
-                            <a href="">Santé</a>
-                            <button type="button" class="with-icon">
-                                <i class="zmdi zmdi-chevron-right"></i>
-                            </button>
-                        </span>
-                        <ul>
-                            <li><a href="">Élections européennes 2024</a></li>
-                            <li><a href="">Législatives 2024</a></li>
-                            <li><a href="">Vie du Parlement européen (10e législature)</a></li>
-                            <li><a href="">Toute notre couverture Pouvoirs</a></li>
-                        </ul>
-                    </li>
-                    <li class="accordion">
-                        <span>
-                            <a href="">Tech</a>
-                            <button type="button" class="with-icon">
-                                <i class="zmdi zmdi-chevron-right"></i>
-                            </button>
-                        </span>
-                        <ul>
-                            <li><a href="">Élections européennes 2024</a></li>
-                            <li><a href="">Législatives 2024</a></li>
-                            <li><a href="">Vie du Parlement européen (10e législature)</a></li>
-                            <li><a href="">Toute notre couverture Pouvoirs</a></li>
-                        </ul>
-                    </li>
-                    <li class="accordion">
-                        <span>
-                            <a href="">Média</a>
-                            <button type="button" class="with-icon">
-                                <i class="zmdi zmdi-chevron-right"></i>
-                            </button>
-                        </span>
-                        <ul>
-                            <li><a href="">Élections européennes 2024</a></li>
-                            <li><a href="">Législatives 2024</a></li>
-                            <li><a href="">Vie du Parlement européen (10e législature)</a></li>
-                            <li><a href="">Toute notre couverture Pouvoirs</a></li>
-                        </ul>
-                    </li>
+                    {% endfor %}
                 </ul>
             </li>
             <li><a href="">Aide</a></li>

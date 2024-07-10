@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static core_tags %}
 
 
 {% block title %}Context{% endblock title %}
@@ -12,6 +12,9 @@
                     <p class="title-section">
                         <span>{{ title_section }}</span>
                     </p>
+                    {% if intro_section %}
+                        <div class="intro-section">{{ intro_section|markdown }}</div>
+                    {% endif %}
                 {% endblock %}
                 <div class="content">
                     {% block content_beta %}{% endblock %}
