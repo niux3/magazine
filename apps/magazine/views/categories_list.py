@@ -13,5 +13,6 @@ class CategoriesList(ListView):
         ctx['title_section'] = current_category.name
         ctx['intro_section'] = current_category.content
         ctx['object'] = Post.objects.filter(online=True, featured=True)[0]
+        ctx['object_list'] = current_category.magazine_posts_category.filter(online=True)
         ctx['share'] = False
         return ctx
