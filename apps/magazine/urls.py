@@ -12,4 +12,5 @@ app_name = MagazineConfig.name
 urlpatterns = [
     path('', PostsList.as_view(), name='index'),
     path('<int:id>-<slug:slug>.html', PostDetail.as_view(), name='detail'),
+    path('edition/<slug:slug>.html', PostDetail.as_view(), name='categories'),
 ]
