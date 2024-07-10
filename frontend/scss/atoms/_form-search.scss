@@ -21,6 +21,10 @@
             right: .5rem;
         }
 
+        label{
+            display: none;
+        }
+
         div{
             &:first-of-type{
                 width: calc(90% - 1.5rem);

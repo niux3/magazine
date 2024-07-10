@@ -1,15 +1,19 @@
-<form method="get" id="form-search">
+<form method="get" id="form-search" action="{% url 'magazine:search' %}">
     <div class="content">
         <button type="button" id="btnCloseSearch" aria-label="Fermer" class="with-icon">
             <i class="zmdi zmdi-close"></i>
         </button>
+        {{ search_form.as_div }}
+        {% comment %}
         <div>
             <input type="search" name="q" autocomplete="off" placeholder="Rechercher sur Contexte">
         </div>
+        {% endcomment %}
         <div>
             <button type="submit" aria-label="Chercher" class="with-icon">
                 <i class="zmdi zmdi-search"></i>
             </button>
         </div>
     </div>
+    {% csrf_token %}
 </form>

@@ -4,6 +4,7 @@ from magazine.views import (
     PostsList,
     CategoriesList,
     PostDetail,
+    SearchList,
 )
 
 
@@ -14,4 +15,5 @@ urlpatterns = [
     path('', PostsList.as_view(), name='index'),
     path('<int:id>-<slug:slug>.html', PostDetail.as_view(), name='detail'),
     path('edition/<slug:slug>.html', CategoriesList.as_view(), name='categories'),
+    path('chercher.html', SearchList.as_view(), name='search'),
 ]
