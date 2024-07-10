@@ -3,7 +3,7 @@
         .wrap-content{
             @include breakpoints(medium-plus-screen){
                 position: relative;
-                z-index: 100;
+                z-index: 500;
                 margin-top: -15rem;
                 display: flex;
                 justify-content: center;
