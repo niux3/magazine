@@ -87,16 +87,11 @@ $breakpoints: (
 
 $fonts : (
     materialicons     : materialicons-regular,
-    light             : raleway-light-webfont,
-    lightitalic       : raleway-lightitalic-webfont,
-    regular           : raleway-regular-webfont,
-    italic            : raleway-regularitalic-webfont,
-    bold              : raleway-bold-webfont,
-    bolditalic        : raleway-bolditalic-webfont,
+    robotocondensed   : robotocondensed-bold-webfont,
 ) !default;
 
-$font-family-base : georgia, serif !default;
-$font-family-title : "Roboto Condensed", Helvetica, Arial, sans-serif !default;
+$font-family-base : Georgia, 'Times New Roman', Times, serif !default;
+$font-family-title : robotocondensed, Helvetica, Arial, sans-serif !default;
 $font-family-monospace : consolas, monaco, courier, monospace !default;
 
 $font-size-base : 1.5rem !default;
