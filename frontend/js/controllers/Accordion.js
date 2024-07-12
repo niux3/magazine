@@ -1,10 +1,6 @@
 export default class Accordion{
-    constructor(){
-        this._$accordions = document.querySelectorAll('.accordion')
-    }
-
-    onEvent(){
-        for(let $items of this._$accordions){
+    execute(){
+        for(let $items of document.querySelectorAll('.accordion')){
             for(let $el of $items.querySelectorAll('.accordionItem')){
                 $el.querySelector('button').addEventListener('pointerdown', e =>{
                     if($el.classList.contains('show')){
