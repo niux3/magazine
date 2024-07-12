@@ -1,35 +1,43 @@
 export default class Navigation{
     constructor(){
-        this._$burgerOpen = document.getElementById('burgerOpen')
-        this._$burgerClose = document.getElementById('burgerClose')
+        this._$btnsOpen = document.querySelectorAll('.navigationOpen')
+        this._$btnsClose = document.querySelectorAll('.navigationClose')
         this._$main = document.querySelector('main')
-        this._$accordions = document.querySelectorAll('nav .accordion')
+
+        this._$overlay = document.createElement('div')
+        this._$overlay.className = 'overlay'
+        this._$main.insertAdjacentElement('beforeend', this._$overlay)
+
     }
 
-    openNav(){
-        this._$burgerOpen.addEventListener('pointerdown', e =>{
-            this._$main.dataset.state = 'onNav'
-            document.body.classList.add('ovh')
-        })
-    }
-
-    closeNav(){
-        this._$burgerClose.addEventListener('pointerdown', e =>{
+    onOverlay(){
+        this._$overlay.addEventListener('pointerdown', e =>{
             this._$main.dataset.state = ''
             document.body.classList.remove('ovh')
         })
     }
 
-    onAccordion(){
-        this._$accordions.forEach($el =>{
-            $el.querySelector('button').addEventListener('pointerdown', e =>{
-                if($el.classList.contains('show')){
-                    $el.classList.remove('show')
-                }else{
-                    this._$accordions.forEach($el => $el.classList.remove('show'))
-                    $el.classList.add('show')
-                }
-            })
-        })
+    onOpen(){
+        this._onEvent(this._$btnsOpen, this._open)
+    }
+
+    onClose(){
+        this._onEvent(this._$btnsClose, this._close)
+    }
+
+    _open(e){
+        this._$main.dataset.state = e.currentTarget.dataset.mainState
+        document.body.classList.add('ovh')
+    }
+
+    _close(){
+        this._$main.dataset.state = ''
+        document.body.classList.remove('ovh')
+    }
+
+    _onEvent($group, eventMethod){
+        for(let $btn of $group){
+            $btn.addEventListener('pointerdown', eventMethod.bind(this))
+        }
     }
 }

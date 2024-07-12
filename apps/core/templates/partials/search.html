@@ -1,6 +1,6 @@
 <form method="get" id="form-search" action="{% url 'magazine:search' %}">
     <div class="content">
-        <button type="button" id="btnCloseSearch" aria-label="Fermer" class="with-icon">
+        <button type="button" id="btnCloseSearch" aria-label="Fermer" class="with-icon navigationClose">
             <i class="zmdi zmdi-close"></i>
         </button>
         {{ search_form.as_div }}
