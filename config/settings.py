@@ -69,6 +69,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'core.context_processors.get_three_posts_by_categories',
                 'core.context_processors.get_search_form',
+                'core.context_processors.get_auth_form',
             ],
         },
     },

@@ -1,0 +1,9 @@
+<div id="user">
+    <form id="formUser" method="post" autocomplete="off">
+        {% csrf_token %}
+        {{ login_form.as_div }}
+        <div>
+            <button class="primary" type="submit">se connecter</button>
+        </div>
+    </form>
+</div>

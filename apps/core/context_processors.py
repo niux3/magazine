@@ -1,5 +1,6 @@
 from magazine.models import Category
 from magazine.forms import SearchForm
+from django.contrib.auth.forms import AuthenticationForm
 
 
 def get_three_posts_by_categories(request):
@@ -14,4 +15,9 @@ def get_three_posts_by_categories(request):
 def get_search_form(request):
     return {
         'search_form': SearchForm
+    }
+
+def get_auth_form(request):
+    return {
+        'login_form': AuthenticationForm
     }
